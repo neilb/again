@@ -1,0 +1,68 @@
+again
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+Or use CPANPLUS to automate the process.
+
+Module documentation:
+NAME
+    again - Reload modules when they change
+
+SYNOPSIS
+        use again 'LWP::Simple';             # default import
+        use again 'LWP::Simple', [];         # no import
+        use again 'LWP::Simple', [qw(get)];  # import only get
+    
+        use again 'LWP::Simple', ();         # default import (!!)
+        use again 'LWP::Simple', qw(get);    # import only get
+    
+        use again;
+        require_again 'Foo::Bar';
+
+DESCRIPTION
+    When the perl interpreter lives for a long time, modules are likely to
+    change during its lifetime. Especially for mod_perl applications, this
+    module comes in handy.
+
+  Usage
+    "use again;"
+        A bare "use again;" (that is: no import list) will export
+        "require_again" (and "use_again", which always croaks saying you
+        should use "use again" instead) into your namespace. There is no
+        convenient way to import "require_again" without importing
+        "use_again" too.
+
+    "use again MODULE, [ IMPORTS ];"
+        If you do pass arguments, the first is used with "require_again",
+        and all remaining arguments are used to import symbols into your
+        namespace.
+
+        When given arguments, "use again" does not export its own functions.
+
+        A single array reference is flattened. If that arrayref contains no
+        elements, the import does not take place.
+
+        In mod_perl scripts, this of course only happens when your script is
+        "eval"ed. This happens when your Apache::Registry or Apache::PerlRun
+        script changes, or when your PLP script is requested.
+
+    "require_again MODULE;"
+        This is the driving force behind "again.pm". It "require"s your
+        module if it has not been loaded with "require_again" before or it
+        has changed since the last time "require_again" loaded it.
+
+LICENSE
+    There is no license. This software was released into the public domain.
+    Do with it what you want, but on your own risk. The author disclaims any
+    responsibility.
+
+AUTHOR
+    Juerd <juerd@cpan.org> <http://juerd.nl/>
+
