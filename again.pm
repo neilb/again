@@ -1,7 +1,7 @@
 package again;
 use Carp;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 my %mtimes;
 
@@ -9,7 +9,7 @@ sub require_again {
     @_ == 0 and croak 'Not enough arguments for require_again';
     @_ >  1 and croak 'Too many arguments for require_again';
     my $module = shift;
-    (my $file = "$module.pm") =~ s[::][/];
+    (my $file = "$module.pm") =~ s[::][/]g;
     if (not exists $INC{$file} or -M $INC{$file} < $mtimes{$INC{$file}}) {
         delete $INC{$file};
         require $file;
