@@ -1,10 +1,13 @@
-Revision history for Perl extension again.
+Revision history for Perl extension 'again'.
 
-0.02  Thu Aug  7 08:21:21 2003
-        - Added /g. again.pm didn't work with module names that have more than
-          one set of "::". It looked for Net/Whois::Raw.pm.
+0.03 2013-02-23
+    - reformatted this file to confirm to CPAN::Changes::Spec
 
-0.01  Thu Mar  6 09:43:15 2003
+0.02 2003-08-07
+    - Added /g. again.pm didn't work with module names that have more than
+      one set of "::". It looked for Net/Whois::Raw.pm.
+
+0.01 2003-03-06
 	- original version; created by h2xs 1.22 with options
 		-AXn again
 
