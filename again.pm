@@ -1,7 +1,7 @@
 package again;
 use Carp;
 
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 my %mtimes;
 
@@ -54,15 +54,15 @@ again - Reload modules when they change
 
 =head1 SYNOPSIS
 
-    use again 'LWP::Simple';             # default import
-    use again 'LWP::Simple', [];         # no import
-    use again 'LWP::Simple', [qw(get)];  # import only get
+ use again 'LWP::Simple';             # default import
+ use again 'LWP::Simple', [];         # no import
+ use again 'LWP::Simple', [qw(get)];  # import only get
     
-    use again 'LWP::Simple', ();         # default import (!!)
-    use again 'LWP::Simple', qw(get);    # import only get
+ use again 'LWP::Simple', ();         # default import (!!)
+ use again 'LWP::Simple', qw(get);    # import only get
     
-    use again;
-    require_again 'Foo::Bar';
+ use again;
+ require_again 'Foo::Bar';
 
 =head1 DESCRIPTION
 
@@ -101,6 +101,19 @@ This is the driving force behind C<again.pm>. It C<require>s your module if it
 has not been loaded with C<require_again> before or it has changed since the
 last time C<require_again> loaded it.
 
+If you're imported a function from the module,
+then you'll need to re-import it after calling C<require_again>:
+
+ use again 'Module::Path', qw(module_path);
+
+ ... do some stuff ...
+
+ require_again('Module::Path');
+ Module::Path->import('module_path');
+
+If you don't do this then you'll end up running the version of the
+function that you first loaded.
+
 =back
 
 =head1 LICENSE
@@ -111,6 +124,8 @@ responsibility.
 
 =head1 AUTHOR
 
-Juerd <juerd@cpan.org> <http://juerd.nl/>
+Juerd Waalboer E<lt>juerd@cpan.orgE<gt> E<lt>http://juerd.nl/E<gt>
+
+Documentation updates from Neil Bowers.
 
 =cut
