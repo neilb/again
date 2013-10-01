@@ -2,6 +2,7 @@ Revision history for Perl extension 'again'.
 
 0.04 2013-10-01
     - Added metadata for repository and license
+    - use strict and warnings in again.pm (with scoped use of no strict 'refs')
 
 0.03 2013-02-23
     - added section to doc explaining you will need to re-import any

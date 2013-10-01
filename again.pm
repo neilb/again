@@ -1,4 +1,6 @@
 package again;
+use strict;
+use warnings;
 use Carp;
 
 our $VERSION = '0.03';
@@ -37,6 +39,7 @@ sub import {
         splice @_, 0, 1, 'import';
         goto &use;
     }
+    no strict 'refs';
     *{caller() . "::use_again"} = \&use_again;
     *{caller() . "::require_again"} = \&require_again;
 }
