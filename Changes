@@ -14,6 +14,5 @@ Revision history for Perl extension 'again'.
       one set of "::". It looked for Net/Whois::Raw.pm.
 
 0.01 2003-03-06
-	- original version; created by h2xs 1.22 with options
-		-AXn again
+    - original version; created by h2xs 1.22 with options -AXn again
 
