@@ -125,6 +125,9 @@ There is no license. This software was released into the public domain.
 Do with it what you want, but on your own risk. The author disclaims any
 responsibility.
 
+If you want to (re)distribute this module and need a license,
+you can redistribute it and/or modify it under the same terms as Perl itself.
+
 =head1 AUTHOR
 
 Juerd Waalboer E<lt>juerd@cpan.orgE<gt> E<lt>http://juerd.nl/E<gt>
