@@ -1,5 +1,8 @@
 Revision history for Perl extension 'again'.
 
+0.04 2013-10-01
+    - Added metadata for repository and license
+
 0.03 2013-02-23
     - added section to doc explaining you will need to re-import any
       symbols you imported on first use.
