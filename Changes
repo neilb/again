@@ -1,4 +1,7 @@
-Revision history for Perl extension 'again'.
+Revision history for Perl module 'again'
+
+0.05 2014-01-29
+    - Moved again.pm into lib/
 
 0.04 2013-10-01
     - Added metadata for repository and license
