@@ -70,9 +70,10 @@ again - Reload modules when they change
 
 =head1 DESCRIPTION
 
-When the perl interpreter lives for a long time, modules are likely to change
-during its lifetime. Especially for mod_perl applications, this module comes in
-handy.
+The B<again> module provides a mechanism for reloading a module
+if its file has changed since it was first / previously loaded.
+This can be useful for long-running applications, where new versions of
+modules might be installed while the application is still running.
 
 =head2 Usage
 
