@@ -4,7 +4,7 @@ use warnings;
 use 5.006;
 use Carp;
 
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 my %mtimes;
 
@@ -119,6 +119,10 @@ If you don't do this then you'll end up running the version of the
 function that you first loaded.
 
 =back
+
+=head1 REPOSITORY
+
+L<https://github.com/neilbowers/again>
 
 =head1 LICENSE
 

@@ -1,5 +1,8 @@
 Revision history for Perl module 'again'
 
+0.06 2014-05-25
+    - Added github repo to pod
+
 0.05 2014-01-29
     - Added strict, warnings and Carp as prereqs in Makefile.PL
     - Moved again.pm into lib/
