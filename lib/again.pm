@@ -1,10 +1,9 @@
 package again;
+
 use strict;
 use warnings;
 use 5.006;
 use Carp;
-
-our $VERSION = '0.06';
 
 my %mtimes;
 
