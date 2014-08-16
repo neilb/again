@@ -125,13 +125,15 @@ function that you first loaded.
 
 L<Module::Reload> provides a class method which checks all
 loaded modules to see if the file on disk has changed since the module
-was loaded. It was last updated in 1998, and I haven't tested it.
+was loaded.
 
 L<Class::Unload> unloads a class, by clearing out its symbol table
 and removing it from C<%INC>.
 
-L<Padre::Unload> is part of the L<Padre> IDE. It's similar to Class::Unload,
-but says it has "a few more tricks up its sleeve". It's not documented though,
+L<Padre::Unload> is part of the L<Padre> IDE.
+It's similar to L<Class::Unload>,
+but says it has "a few more tricks up its sleeve".
+It's not documented though,
 so just intended for internal use in Padre.
 
 =head1 REPOSITORY
