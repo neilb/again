@@ -3,6 +3,7 @@ Revision history for Perl module 'again'
 0.07 2014-08-16
     - Improved the abstract (NAME section in pod)
     - Switched to Dist::Zilla
+    - Minor improvements to DESCRIPTION, particularly first paragraph.
 
 0.06 2014-05-25
     - Added a SEE ALSO section to the pod

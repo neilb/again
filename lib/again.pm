@@ -70,7 +70,7 @@ again - mechanism for manually reloading modules when they've changed
 
 =head1 DESCRIPTION
 
-The B<again> module provides a mechanism for reloading a module
+This module provides a mechanism for manually reloading a module
 if its file has changed since it was first / previously loaded.
 This can be useful for long-running applications, where new versions of
 modules might be installed while the application is still running.
@@ -81,10 +81,10 @@ modules might be installed while the application is still running.
 
 =item C<use again;>
 
-A bare C<use again;> (that is: no import list) will export C<require_again>
-(and C<use_again>, which always croaks saying you should use C<use again>
-instead) into your namespace. There is no convenient way to import 
-C<require_again> without importing C<use_again> too.
+A bare C<use again;>, with no import list,
+will export C<require_again> into your package.
+For historical reasons it will also export C<use_again>,
+which you shouldn't use (it will croak anyway).
 
 =item C<use again MODULE, [ IMPORTS ];>
 
