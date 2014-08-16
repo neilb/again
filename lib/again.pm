@@ -54,7 +54,7 @@ sub unimport {
 
 =head1 NAME
 
-again - Reload modules when they change
+again - mechanism for manually reloading modules when they've changed
 
 =head1 SYNOPSIS
 

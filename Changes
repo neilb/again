@@ -1,5 +1,8 @@
 Revision history for Perl module 'again'
 
+0.07 2014-08-16
+    - Improved the abstract (NAME section in pod)
+
 0.06 2014-05-25
     - Added a SEE ALSO section to the pod
     - Improved first paragraph of DESCRIPTION
